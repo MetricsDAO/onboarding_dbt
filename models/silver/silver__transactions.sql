@@ -22,7 +22,7 @@ WITH base_txs AS (
         This approach presumes the most recent one is the correct piece of data.
     #}
         qualify ROW_NUMBER() over (
-            PARTITION BY block_id
+            PARTITION BY tx_id
             ORDER BY
                 _inserted_timestamp DESC
         ) = 1
