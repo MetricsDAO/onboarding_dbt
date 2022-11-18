@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: core__fact_blocks
+    description: |-
+      This table records all the blocks of Harmony blockchain.
+
+    columns:
+      - name: block_id
+        description: The block number.
+
+      - name: block_timestamp
+        description: The timestamp for when the block was collated.
+
+      - name: block_hash
+        description: Hash of the block (32 Bytes).
+
+      - name: block_parent_hash
+        description: Hash of the parent block (32 Bytes).
+
+      - name: gas_limit
+        description: The maximum gas allowed in this block.
+
+      - name: gas_used
+        description: The total used gas by all transactions in this block.
+
+      - name: miner
+        description: The address of the beneficiary to whom the mining rewards were given.
+
+      - name: nonce
+        description: Hash of the generated proof-of-work (8 Bytes).
+
+      - name: size
+        description: Integer the size of this block in bytes.
+
+      - name: tx_count
+        description: The number of transactions in the given block.
+
+      - name: state_root
+        description: The root hash that stores the entire state of the system - account balances, contract storage, contract code and account nonces are inside
+
+      - name: receipts_root
+        description: The root hash that stores receipts of all transactions included in the block.

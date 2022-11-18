@@ -19,7 +19,7 @@ There are several ways to use dbt on you machine or in the cloud. We have put to
 `/seeds` - a directory for adding hard-coded data to the models via CSV upload. This is commonly used for known labels or sample data for unit testing.
 
 ## Background on Data
-This project utilizes a set of archived Harmony data for practice purposes.
+This project utilizes a set of archived Harmony data for practice purposes. The original project repository is located [here](https://github.com/MetricsDAO/harmony_dbt/). The present form has been refactored to meet our [bronze/silver/gold model standards](https://docs.metricsdao.xyz/data-curation/data-curator-onboarding/data-modeling-standards).
 
 The primary source of projects, thus far, has been Flipside Crypto's chainwalker database. The raw data is shared via direct account share in Snowflake for us to use and curate. The structure follows the below, but may change as their ingestion process evolves. The blocks and transactions data is generally the raw response from RPC endpoints.
 `CHAINWALKERS.PROD.<chain>_BLOCKS`
