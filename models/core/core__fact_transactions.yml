@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: core__fact_transactions
+    description: |-
+      This table records all the transactions of the Harmony blockchain.
+
+    columns:
+      - name: block_timestamp
+        description: The time when the block was mined.
+
+      - name: _inserted_timestamp
+        description: The timestamp for when the block was ingested.
+
+      - name: nonce
+        description: The number of transactions made by the sender prior to this one.
+
+      - name: index
+        description: Integer of the transactions index position in the block. `null` when its pending.
+
+      - name: native_from_address
+        description: Native Harmony address of the sender.
+
+      - name: native_to_address
+        description: Native Harmony address of the receiver.
+
+      - name: from_address
+        description: The Ethereum address of the sender.
+
+      - name: to_address
+        description: The Ethereum address of the receiver.
+
+      - name: value
+        description: The value transfered in ATTO format (a factor of 10^18).
+
+      - name: block_number
+        description: Block number where this transaction was in. `null` when it's pending.
+
+      - name: block_hash
+        description: Hash of the block where this transaction was in. `null` when it's pending.
+
+      - name: gas_price
+        description: Gas price provided by the sender.
+
+      - name: gas_limit
+        description: Gas provided by the sender, which could be different than actual gas used by the transaction.
+      
+      - name: tx_hash
+        description: The Ethereum hash of the transaction which is the primary key for this table.
+
+      - name: data
+        description: Bytecode of the data sent along with the transaction.
+
+      - name: status
+        description: Boolean representing whether the transaction is successful or not.
+
+      - name: tx_receipt
+        description: Object of the transaction's receipt.

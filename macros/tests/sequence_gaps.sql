@@ -1,4 +1,4 @@
-% test sequence_gaps(
+{% test sequence_gaps(
     model,
     partition_by,
     column_name
